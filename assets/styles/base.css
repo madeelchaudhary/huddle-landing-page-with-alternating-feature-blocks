@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-pink: hsl(322, 100%, 66%);
+
+  --light-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --light-blue: hsl(208, 11%, 55%);
+
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "Poppins", sans-serif;
+  --fs-body: 18px;
+  --fs-h1: 1.95rem;
+  --fs-h2: 1.65rem;
+  --fs-h3: 1.15rem;
+
+  --fw-600: 600;
+  --fw-400: 400;
+  --fw-700: 700;
+}
+
+@media screen and (min-width: 900px) {
+  :root {
+    --fs-h1: 2.45rem;
+    --fs-h2: 1.7rem;
+    --fs-h3: 1.85rem;
+  }
+}
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-400);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  line-height: 1.25;
+  font-family: var(--ff-secondary);
+}
+
+h1,
+.h1 {
+  font-size: var(--fs-h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--fs-h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--fs-h3);
+}
+ul,
+ol,
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.btn {
+  border: none;
+  text-decoration: none;
+  outline: none;
+
+  display: inline-block;
+  padding: 0.825rem 2.65rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-clr);
+  border-radius: 2em;
+
+  font-weight: var(--fw-700);
+  cursor: pointer;
+}
+
+.btn-default {
+  --btn-bg: #fff;
+  --btn-clr: var(--dark-cyan);
+  transition: box-shadow, opacity 0.25s ease-in-out;
+}
+.btn-default:hover,
+.btn-default:focus {
+  opacity: 0.85;
+  box-shadow: 0 2px 0.75em hsla(192, 100%, 9%, 0.226);
+}
+.btn-primary {
+  --btn-bg: var(--dark-pink);
+  --btn-clr: #fff;
+  font-size: calc(var(--fs-body) / 1.15);
+  transition: opacity, box-shadow 0.25s ease-in-out;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  opacity: 0.725;
+  box-shadow: 0 2px 1em hsla(192, 100%, 4%, 0.226);
+}
+.d-flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+.captialize {
+  text-transform: capitalize;
+}
+
+.container {
+  max-width: 1160px;
+  width: 88%;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 992px) {
+  .btn {
+    padding: 0.9em 3em;
+  }
+  .m-lg-0 {
+    margin: 0;
+  }
+}
